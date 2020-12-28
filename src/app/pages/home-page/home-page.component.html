@@ -1,0 +1,90 @@
+<div class="container">
+    <header class="title mt-5 pb-2 border-bottom">
+        <h5 class="text-center text-capitalize m-0">assignment</h5>
+    </header>
+    <section>
+        <div class="row m-0">
+            <div class="col-md-6 mx-3 my-2 p-0 information-block">
+                <div class="row m-0">
+                    <div class="col-md-1 px-2">
+                        <i class="fa fa-user" aria-hidden="true"></i>
+                    </div>
+                    <div class="col-md-11 px-0">
+                        <h3 class="customer-information-tilte text-capitalize m-0">customer information</h3>
+                        <div class="row m-0" *ngFor="let list of customerInfo">
+                            <div class="col-md-3 px-0">
+                                <b class="customer-Info">{{list.displayName}}</b>
+                            </div>
+                            <div class="col-md-1"><span>:</span></div>
+                            <div class="col-md-8 px-0">
+                                <div>
+                                    {{list.value}}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-5 mx-3 my-2 information-block ">
+                <div class="row">
+                    <div class="col-md-12 px-0">
+                        <div class="row m-0">
+                            <div class="col-md-1"></div>
+                            <div class="col-md-7">
+                                <b>Order Date</b>
+                            </div>
+                            <div class="col-md-4">
+                       <b>         {{orderDate | date:'	dd/LL/yyyy'}}</b>
+                            </div>
+                        </div>
+                        <div class="row m-0">
+                            <div class="col-md-1">
+                                <i class="fa fa-calculator" aria-hidden="true"></i>
+                            </div>
+                            <div class="col-md-10">
+                                <h1 class="order-title font-weight-bold m-0">Order Details</h1>
+                                <div *ngFor="let key of orderDetails">
+                                    <div class="row m-0">
+                                        <div class="col-md-8 px-0"><b class="order-name"> {{key.orderName}}</b></div>
+                                        <div class="col-md-2 ">
+                                            <span> {{key.quantity }}</span>
+                                        </div>
+                                        <div class="col-md-2 ">
+                                            <span> {{key.value |currency :'INR'}}</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row m-0">
+            <div class="col-md-6 mx-3 my-2 p-0 information-block ">
+                <div class="row m-0">
+                    <div class="col-md-1 px-2">
+                        <i class='fas fa-hotel'></i>
+                    </div>
+                    <div class="col-md-11 px-0">
+                        <h3 class="customer-information-tilte m-0 ">{{customerOutletName}}</h3>
+                        <div class="row m-0" *ngFor="let list of restaurantStatus">
+                            <div class="col-md-3 px-0">
+                                <b class="customer-Info">{{list.displayName}}</b>
+                            </div>
+                            <div class="col-md-1"><span>:</span></div>
+                            <div class="col-md-8 px-0">
+                                <div>
+                                    {{list.value}}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-right  m-2">
+                            <button class="btn text-capitalize border-primary text-primary bg-0">update contact</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

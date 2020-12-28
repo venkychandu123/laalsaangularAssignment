@@ -1,0 +1,19 @@
+.title h5 {
+    font-size: 25px;
+    font-weight: 500;
+}
+.information-block {
+    border: 4px solid black;
+}
+.customer-Info {
+    font-size: 14px;
+}
+.order-title {
+    font-size: 15px;
+}
+.order-name{
+    font-size: 13px;
+}
+.customer-information-tilte {
+    font-size: 20px;
+}
